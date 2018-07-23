@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import 'semantic-ui-css/semantic.css';
 import './App.css';
 
 class App extends Component {
