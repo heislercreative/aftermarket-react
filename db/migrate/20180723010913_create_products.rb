@@ -2,7 +2,8 @@ class CreateProducts < ActiveRecord::Migration[5.2]
   def change
     create_table :products do |t|
       t.string :name
-      t.string :photo
+      t.string :img_full
+      t.string :img_thumbnail
       t.string :overview
       t.text :description
       t.integer :price
