@@ -12,25 +12,27 @@
 
 ActiveRecord::Schema.define(version: 2018_07_23_012242) do
 
+  create_table "cart_products", force: :cascade do |t|
+    t.integer "cart_id"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "carts", force: :cascade do |t|
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
+    t.string "photo"
     t.string "overview"
     t.text "description"
     t.integer "price"
     t.boolean "free_shipping"
     t.boolean "returns"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "user_products", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
