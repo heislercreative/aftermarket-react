@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 2018_07_23_012242) do
     t.string "name"
     t.string "img_full"
     t.string "img_thumbnail"
-    t.string "overview"
     t.text "description"
     t.integer "price"
     t.boolean "free_shipping"

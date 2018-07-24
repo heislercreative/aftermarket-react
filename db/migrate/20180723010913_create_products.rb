@@ -4,7 +4,6 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :img_full
       t.string :img_thumbnail
-      t.string :overview
       t.text :description
       t.integer :price
       t.boolean :free_shipping
