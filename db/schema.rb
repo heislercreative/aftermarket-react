@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2018_07_23_012242) do
     t.text "description"
     t.integer "price"
     t.boolean "free_shipping"
-    t.boolean "returns"
+    t.boolean "sold_out"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
