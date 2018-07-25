@@ -7,7 +7,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.text :description
       t.integer :price
       t.boolean :free_shipping
-      t.boolean :sold_out
+      t.boolean :sold_out, default: false
 
       t.timestamps
     end
