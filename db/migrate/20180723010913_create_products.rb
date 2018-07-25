@@ -6,7 +6,6 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :img_thumbnail
       t.text :description
       t.integer :price
-      t.boolean :free_shipping
       t.boolean :sold_out, default: false
 
       t.timestamps
