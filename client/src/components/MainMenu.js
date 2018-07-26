@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Menu, Header, Icon } from 'semantic-ui-react'
+import Logo from './Logo'
 
 export default class MainMenu extends Component {
   state = { activeItem: 'home' }
@@ -15,10 +16,9 @@ export default class MainMenu extends Component {
       <Menu>
         <Menu.Item
           name='home'
-          color='orange'
           active={activeItem === 'home'}
           onClick={this.handleMenuClick}
-        ><Icon fitted name='recycle'/>FTERMARKET</Menu.Item>
+        ><Logo /></Menu.Item>
         <Menu.Item
           name='account'
           active={activeItem === 'account'}
