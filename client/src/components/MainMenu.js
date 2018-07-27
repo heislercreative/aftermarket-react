@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Header, Icon } from 'semantic-ui-react'
+import { Menu, Sticky, Icon, Divider } from 'semantic-ui-react'
 import Logo from './Logo'
 
 export default class MainMenu extends Component {
@@ -13,6 +13,7 @@ export default class MainMenu extends Component {
     const { activeItem } = this.state
 
     return (
+      <Sticky>
       <Menu>
         <Menu.Item
           name='home'
@@ -37,6 +38,8 @@ export default class MainMenu extends Component {
           >Log In/Out </Menu.Item>
       </Menu.Menu>
       </Menu>
+      <Divider hidden />
+      </Sticky>
     )
   }
 }
