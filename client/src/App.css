@@ -26,3 +26,8 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.form-input {
+  width: 250px;
+  margin-right: 90px;
+}

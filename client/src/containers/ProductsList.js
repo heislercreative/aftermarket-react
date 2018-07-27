@@ -6,7 +6,6 @@ class ProductsList extends Component {
   render() {
     return(
       <div>
-        <Divider hidden />
         <Header as='h2' textAlign='center'>
           <Logo /> Products
           <Divider hidden />
