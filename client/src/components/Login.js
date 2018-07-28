@@ -10,8 +10,8 @@ class Login extends Component {
           <Divider hidden />
         </Header>
         <Form>
-          <p><Input className='form-input' label='&nbsp;&nbsp;&nbsp;Email&nbsp;&nbsp;&nbsp;&nbsp;' placeholder='account@aftermarket.com' /></p>
-          <p><Input className='form-input' label='Password' placeholder='••••••••' type='password'/></p><br/>
+          <Input className='form-input' label='&nbsp;&nbsp;&nbsp;Email&nbsp;&nbsp;&nbsp;&nbsp;' placeholder='account@aftermarket.com' /><br/>
+          <Input className='form-input' label='Password' placeholder='••••••••' type='password'/><br/><br/>
           <Button primary type='submit'>Log In</Button>
         </Form>
         <Divider horizontal section>OR</Divider>
