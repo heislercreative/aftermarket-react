@@ -15,7 +15,7 @@ class AccountForm extends Component {
         <Input className='form-input' list='states' label='State' placeholder='IN' />
           <StatesList /><br/>
         <Input className='form-input' label='Zip Code' placeholder='12345' width={2} /><br/><br/>
-        <Button primary type='submit'>Sign Up</Button>
+        <Button primary type='submit'>Submit</Button>
       </Form>
     )
   }
