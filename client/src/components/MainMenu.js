@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { Menu, Sticky, Icon, Divider } from 'semantic-ui-react'
 import Logo from './Logo'
 
@@ -16,11 +17,13 @@ class MainMenu extends Component {
       <Sticky>
         <Menu>
           <Menu.Item
+            as={Link} to='/'
             name='home'
             active={activeItem === 'home'}
             onClick={this.handleMenuClick}
           ><Logo /></Menu.Item>
           <Menu.Item
+            as={Link} to='/account'
             name='account'
             active={activeItem === 'account'}
             onClick={this.handleMenuClick}
@@ -32,6 +35,7 @@ class MainMenu extends Component {
               onClick={this.handleMenuClick}
             ><Icon name='shopping cart' />Cart</Menu.Item>
             <Menu.Item
+              as={Link} to='/login'
               name='log-in-out'
               active={activeItem === 'log-in-out'}
               onClick={this.handleMenuClick}
