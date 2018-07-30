@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { Header, Container, Button, Divider } from 'semantic-ui-react'
 import AccountForm from './AccountForm'
 
@@ -13,7 +14,7 @@ class Signup extends Component {
         </Header>
         <AccountForm />
         <Divider horizontal section>OR</Divider>
-        <Button secondary>Log In</Button>
+        <Button as={Link} to='/login' secondary>Log In</Button>
       </Container>
     )
   }

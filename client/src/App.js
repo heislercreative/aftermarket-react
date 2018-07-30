@@ -5,6 +5,7 @@ import './App.css';
 import MainMenu from './components/MainMenu'
 import ProductsList from './containers/ProductsList'
 import Account from './components/Account'
+import Cart from './containers/Cart'
 import Login from './components/Login'
 import Signup from './components/Signup'
 
@@ -19,6 +20,7 @@ class App extends Component {
           <Route exact path="/account" component={Account} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/cart" component={Cart} />
         </div>
       </Router>
     );

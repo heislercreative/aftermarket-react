@@ -32,3 +32,27 @@
   margin-right: 90px;
   margin-bottom: 20px;
 }
+
+.cart-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cart-left {
+  width: 67%;
+  float: left;
+  text-align: left;
+  padding: 20px;
+}
+
+.cart-right {
+  width: 33%;
+  float: right;
+  text-align: left;
+  padding: 20px;
+  color: white;
+  background-color: #FD7322;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px grey;
+}

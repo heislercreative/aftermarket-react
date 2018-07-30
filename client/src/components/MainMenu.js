@@ -30,6 +30,7 @@ class MainMenu extends Component {
           />
           <Menu.Menu position='right'>
             <Menu.Item
+              as={Link} to='/cart'
               name='cart'
               active={activeItem === 'cart'}
               onClick={this.handleMenuClick}
