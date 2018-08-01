@@ -18,8 +18,17 @@ label {
   text-align: left;
 }
 
+.city-input {
+  min-width: 280px;
+  padding-bottom: 15px;
+}
+
 .state-input {
-  width: 75%;
+  width: 85px;
+}
+
+.zip-input {
+  width: 85px;
 }
 
 .cart-container {
