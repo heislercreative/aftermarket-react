@@ -3,42 +3,108 @@ import { Container, Form, Input, Button } from 'semantic-ui-react'
 import StatesList from './StatesList'
 
 class AccountForm extends Component {
+  constructor() {
+    super()
+    this.state = {
+      email: '',
+      password:'',
+      firstName: '',
+      lastName: '',
+      address: '',
+      city: '',
+      stateInitials: '',
+      zip: ''
+    }
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('Hijacked!')
+  }
+
   render(){
     return(
       <div className='form-container'>
-        <Form>
+        <Form onSubmit={this.handleSubmit}>
           <Form.Group widths='equal' className='form-input'>
             <Form.Field>
               <label>Email</label>
-              <input type='text' placeholder='account@aftermarket.com' />
+              <input
+                name='email'
+                type='text'
+                placeholder='account@aftermarket.com'
+                value={this.state.email}
+                onChange={this.handleChange}
+              />
             </Form.Field>
             <Form.Field>
               <label>Password</label>
-              <input type='password' placeholder='••••••••'/>
+              <input
+                name='password'
+                type='password'
+                placeholder='••••••••'
+                value={this.state.password}
+                onChange={this.handleChange}
+              />
             </Form.Field>
           </Form.Group>
           <Form.Group widths='equal' className='form-input'>
             <Form.Field>
               <label>First Name</label>
-              <input type='text' placeholder='John' />
+              <input
+                name='firstName'
+                type='text'
+                placeholder='John'
+                value={this.state.firstName}
+                onChange={this.handleChange}
+              />
             </Form.Field>
             <Form.Field>
               <label>Last Name</label>
-              <input type='text' placeholder='Doe'/>
+              <input
+                name='lastName'
+                type='text'
+                placeholder='Doe'
+                value={this.state.lastName}
+                onChange={this.handleChange}
+              />
             </Form.Field>
           </Form.Group>
           <Form.Field className='form-input'>
             <label>Address</label>
-            <input type='text' placeholder='123 Main St' />
+            <input
+              name='address'
+              type='text'
+              placeholder='123 Main St'
+              value={this.state.address}
+              onChange={this.handleChange}
+            />
           </Form.Field>
           <Form.Field className='form-input'>
             <label>City</label>
-            <input type='text' placeholder='Durnsville' />
+            <input
+              name='city'
+              type='text'
+              placeholder='Durnsville'
+              value={this.state.city}
+              onChange={this.handleChange}
+            />
           </Form.Field>
           <Form.Group className='form-input'>
             <Form.Field className='state-input'>
               <label>State</label>
-              <select className='ui fluid dropdown'>
+              <select
+                name='stateInitials'
+                className='ui fluid dropdown'
+                value={this.state.stateInitials}
+                onChange={this.handleChange}
+                >
                 <option value=""></option>
                 <option value="AL">Alabama</option>
               	<option value="AK">Alaska</option>
@@ -95,12 +161,26 @@ class AccountForm extends Component {
             </Form.Field>
             <Form.Field>
               <label>Zip Code</label>
-              <input type='text' placeholder='12345'/>
+              <input
+                name='zip'
+                type='text'
+                placeholder='12345'
+                value={this.state.zip}
+                onChange={this.handleChange}
+              />
             </Form.Field>
           </Form.Group>
           <br />
           <Button primary type='submit'>Submit</Button>
         </Form>
+        {this.state.email}<br />
+        {this.state.password}<br />
+        {this.state.firstName}<br />
+        {this.state.lastName}<br />
+        {this.state.address}<br />
+        {this.state.city}<br />
+        {this.state.stateInitials}<br />
+        {this.state.zip}<br />
       </div>
     )
   }
