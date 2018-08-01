@@ -25,7 +25,7 @@ class AccountForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Hijacked!')
+    console.log(this.state)
   }
 
   render(){
@@ -104,7 +104,7 @@ class AccountForm extends Component {
                 className='ui fluid dropdown'
                 value={this.state.stateInitials}
                 onChange={this.handleChange}
-                >
+              >
                 <option value=""></option>
                 <option value="AL">Alabama</option>
               	<option value="AK">Alaska</option>
