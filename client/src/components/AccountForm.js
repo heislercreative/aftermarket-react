@@ -32,7 +32,7 @@ class AccountForm extends Component {
     return(
       <div className='form-container'>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Group widths='equal' className='form-input'>
+          <Form.Group widths='equal'>
             <Form.Field>
               <label>Email</label>
               <input
@@ -54,7 +54,7 @@ class AccountForm extends Component {
               />
             </Form.Field>
           </Form.Group>
-          <Form.Group widths='equal' className='form-input'>
+          <Form.Group widths='equal'>
             <Form.Field>
               <label>First Name</label>
               <input
@@ -76,7 +76,7 @@ class AccountForm extends Component {
               />
             </Form.Field>
           </Form.Group>
-          <Form.Field className='form-input'>
+          <Form.Field>
             <label>Address</label>
             <input
               name='address'
@@ -86,7 +86,7 @@ class AccountForm extends Component {
               onChange={this.handleChange}
             />
           </Form.Field>
-          <Form.Field className='form-input'>
+          <Form.Field>
             <label>City</label>
             <input
               name='city'
@@ -96,7 +96,7 @@ class AccountForm extends Component {
               onChange={this.handleChange}
             />
           </Form.Field>
-          <Form.Group className='form-input'>
+          <Form.Group>
             <Form.Field className='state-input'>
               <label>State</label>
               <select
