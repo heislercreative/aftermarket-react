@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Header, Container, Button, Divider } from 'semantic-ui-react'
+import { Header, Container, Divider } from 'semantic-ui-react'
 import AccountForm from './AccountForm'
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, Sticky, Icon, Divider } from 'semantic-ui-react'
+import { Menu, Sticky, Icon } from 'semantic-ui-react'
 import Logo from './Logo'
 
 class MainMenu extends Component {
