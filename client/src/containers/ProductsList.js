@@ -15,6 +15,7 @@ class ProductsList extends Component {
           <ProductBasic />
           <ProductBasic />
           <ProductBasic />
+          <ProductBasic />
         </div>
       </div>
     )

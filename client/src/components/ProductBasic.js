@@ -5,7 +5,8 @@ class ProductBasic extends Component {
     return (
       <div className='product-div'>
         <img className='thumbnail-img' src='https://react.semantic-ui.com/images/wireframe/image.png' />
-        <h4>Awesome Product</h4>
+        <a href='#'><h4>Awesome Product</h4></a>
+        <em>$70</em>
       </div>
     )
   }
