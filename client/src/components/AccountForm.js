@@ -104,7 +104,7 @@ class AccountForm extends Component {
                 className='ui fluid dropdown'
                 list='states'
                 placeholder='IN'
-                maxlength='2'
+                maxLength='2'
                 value={this.state.stateInitials}
                 onChange={this.handleChange}
               />
@@ -116,7 +116,7 @@ class AccountForm extends Component {
                 name='zip'
                 type='text'
                 placeholder='12345'
-                maxlength='5'
+                maxLength='5'
                 value={this.state.zip}
                 onChange={this.handleChange}
               />
