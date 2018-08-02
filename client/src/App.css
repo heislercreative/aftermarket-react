@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+.product-div {
+  display: inline-block;
+  margin: 15px;
+  text-align: center;
+}
+
+.thumbnail-img {
+  max-width: 250px;
+}
+
 .form-container {
   width: 60%;
   margin-left: auto;
@@ -31,7 +41,7 @@ label {
   width: 85px;
 }
 
-.cart-container {
+.page-container {
   width: 90%;
   margin-left: auto;
   margin-right: auto;

@@ -10,7 +10,7 @@ class Cart extends Component {
             Your Cart
             <Divider hidden />
           </Header>
-          <div className='cart-container'>
+          <div className='page-container'>
             <Divider />
             <div className='cart-left'>Items</div>
             <div className='cart-right'>Total</div>
