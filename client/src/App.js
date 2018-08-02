@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Divider } from 'semantic-ui-react'
 import './App.css';
 import MainMenu from './components/MainMenu'
-import ProductsList from './containers/ProductsList'
+import ProductsPage from './containers/ProductsPage'
 import Account from './components/Account'
 import Cart from './containers/Cart'
 import Login from './components/Login'
@@ -16,7 +16,7 @@ class App extends Component {
         <div className="App">
           <MainMenu />
           <Divider hidden />
-          <Route exact path="/" component={ProductsList} />
+          <Route exact path="/" component={ProductsPage} />
           <Route exact path="/account" component={Account} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
