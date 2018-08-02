@@ -4,6 +4,7 @@
 
 .product-div {
   display: inline-block;
+  vertical-align: top;
   margin: 15px;
   text-align: left;
 }

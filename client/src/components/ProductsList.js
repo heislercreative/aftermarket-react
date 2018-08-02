@@ -8,6 +8,7 @@ class ProductsList extends Component {
         {this.props.products.map(product =>
           <ProductBasic
             name={product.name}
+            thumbnail={product.img_thumbnail}
             price={product.price}
           />
         )}
