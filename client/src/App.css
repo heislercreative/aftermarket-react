@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.product-link {
+  color: grey;
+}
+
+.product-link:hover {
+  color: #FD7322;
+}
+
 .product-div {
   display: inline-block;
   vertical-align: top;
@@ -14,8 +22,13 @@
   margin-bottom: 0px;
 }
 
+.thumbnail-img:hover {
+  box-shadow: 0px 0px 5px grey;
+}
+
 .product-div h4 {
   max-width: 250px;
+  margin-top: 0px;
   margin-bottom: 0px;
 }
 
