@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
 import { Header, Divider } from 'semantic-ui-react'
 import Logo from '../components/Logo'
 import ProductsList from '../components/ProductsList'
+import ProductShow from '../components/ProductShow'
 
 class ProductsPage extends Component {
   constructor() {
@@ -25,6 +27,7 @@ class ProductsPage extends Component {
           <Divider hidden />
         </Header>
         <ProductsList products={this.state.products} />
+        <Route path={`${this.props.match.url}/:productId`} component={ProductShow} />
       </div>
     )
   }

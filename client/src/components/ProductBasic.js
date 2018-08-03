@@ -1,17 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class ProductBasic extends Component {
-  render() {
-    return (
-      <a className='product-link' href='#'>
-        <div className='product-div'>
-          <img className='thumbnail-img' src={this.props.thumbnail} />
-          <h4>{this.props.name}</h4>
-          <em>${this.props.price}</em>
-        </div>
-      </a>
-    )
-  }
+const ProductBasic = ({ id, name, thumbnail, price }) => {
+  return (
+    <a className='product-link' href={`/products/${id}`}>
+      <div className='product-div'>
+        <img className='thumbnail-img' src={thumbnail} />
+        <h4>{name}</h4>
+        <em>${price}</em>
+      </div>
+    </a>
+  )
 }
 
 export default ProductBasic
