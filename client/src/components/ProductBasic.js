@@ -7,7 +7,7 @@ class ProductBasic extends Component {
         <div className='product-div'>
           <img className='thumbnail-img' src={this.props.thumbnail} />
           <h4>{this.props.name}</h4>
-          <strong>${this.props.price}</strong>
+          <em>${this.props.price}</em>
         </div>
       </a>
     )
