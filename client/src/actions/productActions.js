@@ -1,5 +1,3 @@
-// import fetch from 'isomorphic-fetch'
-
 export function fetchProducts() {
     return (dispatch) => {
       dispatch({ type: 'LOADING_PRODUCTS' })
