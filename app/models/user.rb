@@ -1,8 +1,13 @@
 class User < ApplicationRecord
   has_one :cart
-
   has_secure_password
+
+  before_validation {
+    self.email.to_s.downcase
+  }
+
   validates_presence_of :email, :password, :first_name, :last_name, :address, :city, :state, :zip
+  validates_uniqueness_of :email
   validates :state, length: { maximum: 2 }
   validates :zip, length: { is: 5 }
 
