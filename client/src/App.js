@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from './actions/productActions'
@@ -26,7 +26,7 @@ class App extends Component {
         <div className="App">
           <MainMenu />
           <Divider hidden />
-          <Redirect from="/" to="/products" />
+          <Route exact path="/" component={ProductsPage} />
           <Route exact path="/products" component={ProductsPage} />
           <Route exact path="/account" component={Account} />
           <Route exact path="/login" component={Login} />

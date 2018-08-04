@@ -13,7 +13,7 @@ const ProductsPage = ({ match, products }) =>
       <Divider hidden />
     </Header>
     <ProductsList products={products} />
-    <Route path={`${match.url}/:productId`} component={ProductShow} />
+    <Route path={'/products/:productId'} component={ProductShow} />
     {match.url}
   </div>
 
