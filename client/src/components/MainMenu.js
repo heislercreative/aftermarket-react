@@ -17,7 +17,7 @@ class MainMenu extends Component {
       <Sticky>
         <Menu>
           <Menu.Item
-            as={Link} to='/'
+            as={Link} to='/products'
             name='home'
             active={activeItem === 'home'}
             onClick={this.handleMenuClick}
