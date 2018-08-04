@@ -12,7 +12,7 @@ class Signup extends Component {
           Create a New Account
           <Divider hidden />
         </Header>
-        <AccountForm />
+        <AccountForm formType={'createUser'} />
         <Divider horizontal section>OR</Divider>
         <Button as={Link} to='/login' secondary>Log In</Button>
       </Container>

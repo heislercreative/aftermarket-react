@@ -11,7 +11,7 @@ class Signup extends Component {
           Update Account Details
           <Divider hidden />
         </Header>
-        <AccountForm />
+        <AccountForm formType={'updateUser'} />
       </Container>
     )
   }

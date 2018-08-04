@@ -133,6 +133,7 @@ class AccountForm extends Component {
         {this.state.city}<br />
         {this.state.stateInitials}<br />
         {this.state.zip}<br />
+        {this.props.formType}
       </div>
     )
   }
