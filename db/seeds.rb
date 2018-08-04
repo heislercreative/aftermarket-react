@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.new_with_cart(email: 'test@aftermarket.test', password: 'testpw', first_name: 'Brennan', last_name: 'Heisler', address: '1234 Main St', city: 'Durnsville', state: 'IN', zip: 12345)
+user = User.new_with_cart(email: 'test@aftermarket.test', password: 'testpw', first_name: 'Brennan', last_name: 'Heisler', address: '1234 Main St', city: 'Durnsville', state_initials: 'IN', zip: 12345)
 user.save
 
 Product.create([

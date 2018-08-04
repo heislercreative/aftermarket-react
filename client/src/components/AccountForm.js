@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { Form, Button } from 'semantic-ui-react'
 import StatesList from './StatesList'
 
@@ -8,11 +9,11 @@ class AccountForm extends Component {
     this.state = {
       email: '',
       password:'',
-      firstName: '',
-      lastName: '',
+      first_name: '',
+      last_name: '',
       address: '',
       city: '',
-      stateInitials: '',
+      state_initials: '',
       zip: ''
     }
   }
@@ -26,6 +27,10 @@ class AccountForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     console.log(this.state)
+    fetch('/api/users', {
+      method: 'POST',
+      body: JSON.stringify(this.state)
+    })
   }
 
   render(){
@@ -58,20 +63,20 @@ class AccountForm extends Component {
             <Form.Field>
               <label>First Name</label>
               <input
-                name='firstName'
+                name='first_name'
                 type='text'
                 placeholder='John'
-                value={this.state.firstName}
+                value={this.state.first_name}
                 onChange={this.handleChange}
               />
             </Form.Field>
             <Form.Field>
               <label>Last Name</label>
               <input
-                name='lastName'
+                name='last_name'
                 type='text'
                 placeholder='Doe'
-                value={this.state.lastName}
+                value={this.state.last_name}
                 onChange={this.handleChange}
               />
             </Form.Field>
@@ -100,12 +105,12 @@ class AccountForm extends Component {
             <Form.Field className='state-input'>
               <label>State</label>
               <input
-                name='stateInitials'
+                name='state_initials'
                 className='ui fluid dropdown'
                 list='states'
                 placeholder='IN'
                 maxLength='2'
-                value={this.state.stateInitials}
+                value={this.state.state_initials}
                 onChange={this.handleChange}
               />
                 <StatesList />
@@ -127,13 +132,14 @@ class AccountForm extends Component {
         </Form>
         {this.state.email}<br />
         {this.state.password}<br />
-        {this.state.firstName}<br />
-        {this.state.lastName}<br />
+        {this.state.first_name}<br />
+        {this.state.last_name}<br />
         {this.state.address}<br />
         {this.state.city}<br />
-        {this.state.stateInitials}<br />
+        {this.state.state_initials}<br />
         {this.state.zip}<br />
-        {this.props.formType}
+        {this.props.formType}<br />
+        {JSON.stringify(this.state)}
       </div>
     )
   }

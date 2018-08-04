@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   validates_presence_of :email, :password, :first_name, :last_name, :address, :city, :state, :zip
   validates_uniqueness_of :email
-  validates :state, length: { maximum: 2 }
+  validates :stateInitials, length: { maximum: 2 }
   validates :zip, length: { is: 5 }
 
   def self.new_with_cart(params)
