@@ -29,14 +29,16 @@ class AccountForm extends Component {
     console.log(this.state)
     fetch('/api/users', {
       method: 'POST',
-      body: JSON.stringify(this.state)
+      body: new FormData(document.getElementById("user-form")),
+      credentials: 'same-origin'
     })
+    .then(resp => console.log(resp))
   }
 
   render(){
     return(
       <div className='form-container'>
-        <Form onSubmit={this.handleSubmit}>
+        <Form id="user-form" onSubmit={this.handleSubmit}>
           <Form.Group widths='equal'>
             <Form.Field>
               <label>Email</label>
