@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2018_07_23_012242) do
     t.string "city"
     t.string "state_initials"
     t.integer "zip"
+    t.string "token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

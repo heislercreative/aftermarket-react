@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as actions from '../actions/userActions'
 import { Link } from 'react-router-dom'
 import { Header, Container, Form, Button, Divider } from 'semantic-ui-react'
 
@@ -19,7 +22,7 @@ class Login extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log(this.state)
+    this.props.actions.loginUser()
   }
 
   render() {
@@ -30,7 +33,7 @@ class Login extends Component {
           <Divider hidden />
         </Header>
         <div className='login-form-container'>
-          <Form onSubmit={this.handleSubmit}>
+          <Form id="login-form" onSubmit={this.handleSubmit}>
             <Form.Field>
               <label>Email</label>
               <input
@@ -56,6 +59,7 @@ class Login extends Component {
           </Form>
           {this.state.email}<br />
           {this.state.password}<br />
+          {this.props.user.token}
         </div>
         <Divider horizontal section>OR</Divider>
         <Button as={Link} to='/signup' secondary>Sign Up</Button>
@@ -64,4 +68,12 @@ class Login extends Component {
   }
 }
 
-export default Login
+function mapStateToProps(state) {
+  return { user: state.user }
+}
+
+function mapDispatchToProps(dispatch) {
+  return { actions: bindActionCreators(actions, dispatch) }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

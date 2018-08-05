@@ -9,6 +9,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :city
       t.string :state_initials
       t.integer :zip
+      t.string :token
 
       t.timestamps
     end
