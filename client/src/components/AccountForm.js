@@ -4,18 +4,32 @@ import { Form, Button } from 'semantic-ui-react'
 import StatesList from './StatesList'
 
 class AccountForm extends Component {
-  constructor() {
-    super()
-    this.state = {
-      email: '',
-      password:'',
-      first_name: '',
-      last_name: '',
-      address: '',
-      city: '',
-      state_initials: '',
-      zip: ''
+  constructor(props) {
+    super(props)
+    if (props.formType === 'createUser') {
+      this.state = {
+        email: '',
+        password: '',
+        first_name: '',
+        last_name: '',
+        address: '',
+        city: '',
+        state_initials: '',
+        zip: ''
+      }
+    } else {
+      this.state = {
+        email: 'email',
+        password: 'password',
+        first_name: 'firstname',
+        last_name: 'lastname',
+        address: 'address',
+        city: 'city',
+        state_initials: 'st',
+        zip: 'zipco'
+      }
     }
+
   }
 
   handleChange = (e) => {
@@ -26,7 +40,6 @@ class AccountForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log(this.state)
     fetch('/api/users', {
       method: 'POST',
       body: new FormData(document.getElementById("user-form")),
@@ -141,7 +154,6 @@ class AccountForm extends Component {
         {this.state.state_initials}<br />
         {this.state.zip}<br />
         {this.props.formType}<br />
-        {JSON.stringify(this.state)}
       </div>
     )
   }
