@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as actions from '../actions/userActions'
+
 import { Form, Button } from 'semantic-ui-react'
 import StatesList from './StatesList'
 
@@ -17,16 +20,16 @@ class AccountForm extends Component {
         state_initials: '',
         zip: ''
       }
-    } else {
+    } else if (props.formType === 'updateUser'){
       this.state = {
-        email: 'email',
-        password: 'password',
-        first_name: 'firstname',
-        last_name: 'lastname',
-        address: 'address',
-        city: 'city',
-        state_initials: 'st',
-        zip: 'zipco'
+        email: props.user.email,
+        password: '',
+        first_name: props.user.first_name,
+        last_name: props.user.last_name,
+        address: props.user.address,
+        city: props.user.city,
+        state_initials: props.user.state_initials,
+        zip: props.user.zip
       }
     }
 
@@ -40,12 +43,7 @@ class AccountForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    fetch('/api/users', {
-      method: 'POST',
-      body: new FormData(document.getElementById("user-form")),
-      credentials: 'same-origin'
-    })
-    .then(resp => console.log(resp))
+    this.props.actions.createUser()
   }
 
   render(){
@@ -154,9 +152,18 @@ class AccountForm extends Component {
         {this.state.state_initials}<br />
         {this.state.zip}<br />
         {this.props.formType}<br />
+        {this.props.user.token}
       </div>
     )
   }
 }
 
-export default AccountForm
+function mapStateToProps(state) {
+  return { user: state.user }
+}
+
+function mapDispatchToProps(dispatch) {
+  return { actions: bindActionCreators(actions, dispatch) }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AccountForm)

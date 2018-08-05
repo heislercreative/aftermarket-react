@@ -6,10 +6,18 @@ export function createUser() {
         body: new FormData(document.getElementById("user-form")),
         credentials: 'same-origin'
       })
-      .then(resp => resp.json())
-      .then(user => dispatch({
-        type: 'CREATE_USER',
-        payload: user
-      }))
+      .then(resp => loginOptions(resp, dispatch))
+  }
+}
+
+function loginOptions(resp, dispatch) {
+  if (resp.status === 201) {
+    const user = resp.json()
+    .then(user => dispatch({
+      type: 'CREATE_USER',
+      payload: user
+    }))
+  } else {
+    console.log('error')
   }
 }
