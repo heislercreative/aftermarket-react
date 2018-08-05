@@ -57,9 +57,6 @@ class Login extends Component {
             <br />
             <Button primary type='submit'>Log In</Button>
           </Form>
-          {this.state.email}<br />
-          {this.state.password}<br />
-          {this.props.user.token}
         </div>
         <Divider horizontal section>OR</Divider>
         <Button as={Link} to='/signup' secondary>Sign Up</Button>

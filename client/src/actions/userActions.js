@@ -6,19 +6,7 @@ export function createUser() {
         body: new FormData(document.getElementById("user-form")),
         credentials: 'same-origin'
       })
-      .then(resp => signupOptions(resp, dispatch))
-  }
-}
-
-function signupOptions(resp, dispatch) {
-  if (resp.status === 201) {
-    const user = resp.json()
-    .then(user => dispatch({
-      type: 'LOGIN_USER',
-      payload: user
-    }))
-  } else {
-    console.log('error')
+      .then(resp => loginOptions(resp, dispatch))
   }
 }
 
@@ -30,7 +18,20 @@ export function loginUser() {
       body: new FormData(document.getElementById("login-form")),
       credentials: 'same-origin'
     })
-    .then(resp => signupOptions(resp, dispatch))
+    .then(resp => loginOptions(resp, dispatch))
+  }
+}
+
+function loginOptions(resp, dispatch) {
+  if (resp.status === 201) {
+    const user = resp.json()
+    .then(user => dispatch({
+      type: 'LOGIN_USER',
+      payload: user
+    }))
+    .then(window.location = '/')
+  } else {
+    console.log('error')
   }
 }
 
@@ -41,5 +42,6 @@ export function logoutUser() {
       type: 'LOGOUT_USER',
       payload: user
     })
+    .then(window.location = '/')
   }
 }

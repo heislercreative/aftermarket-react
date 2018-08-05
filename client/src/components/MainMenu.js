@@ -50,7 +50,6 @@ class MainMenu extends Component {
               onClick={this.handleMenuClick}
             >Log In </Menu.Item>
             <Menu.Item
-              as={Link} to='/logout'
               name='log-out'
               active={activeItem === 'log-out'}
               onClick={this.handleLogout}
