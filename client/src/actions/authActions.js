@@ -1,4 +1,4 @@
-export function createUser(state) {
+export function createUser() {
   return (dispatch) => {
       dispatch({ type: 'SENDING_SIGNUP' })
       return fetch('/api/users', {

@@ -1,24 +1,40 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Route } from 'react-router-dom'
+import { bindActionCreators } from 'redux'
+import * as actions from '../actions/productActions'
+
 import { Header, Divider } from 'semantic-ui-react'
 import Logo from '../components/Logo'
 import ProductsList from '../components/ProductsList'
 import ProductShow from '../components/ProductShow'
 
-const ProductsPage = ({ match, products }) =>
-  <div>
-    <Header as='h2' textAlign='center'>
-      <Logo /> Products
-      <Divider hidden />
-    </Header>
-    <ProductsList products={products} />
-    <Route path={'/products/:productId'} component={ProductShow} />
-    {match.url}
-  </div>
+class ProductsPage extends Component {
+
+  componentDidMount() {
+    this.props.actions.fetchProducts()
+  }
+
+  render() {
+    return (
+      <div>
+        <Header as='h2' textAlign='center'>
+          <Logo /> Products
+          <Divider hidden />
+        </Header>
+        <ProductsList products={this.props.products} />
+        <Route path={'/products/:productId'} component={ProductShow} />
+      </div>
+    )
+  }
+}
 
 function mapStateToProps(state) {
   return { products: state.products }
 }
 
-export default connect(mapStateToProps)(ProductsPage)
+function mapDispatchToProps(dispatch) {
+  return { actions: bindActionCreators(actions, dispatch) }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductsPage)

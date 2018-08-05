@@ -16,10 +16,6 @@ import Signup from './components/Signup'
 
 class App extends Component {
 
-  componentDidMount() {
-    this.props.actions.fetchProducts()
-  }
-
   render() {
     return (
       <Router>
