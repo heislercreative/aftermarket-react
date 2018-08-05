@@ -8,8 +8,14 @@ class User < ApplicationRecord
   validates :state_initials, length: { maximum: 2 }
   validates :zip, length: { is: 5 }
 
+  before_create :generate_random_id
+
   def downcase_email
     self.email.downcase!
+  end
+
+  def generate_random_id
+    self.id = SecureRandom.uuid
   end
 
   def self.new_with_cart(params)
