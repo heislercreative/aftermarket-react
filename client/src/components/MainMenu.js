@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as actions from '../actions/userActions'
 import { Link } from 'react-router-dom'
 import { Menu, Sticky, Icon } from 'semantic-ui-react'
 import Logo from './Logo'
@@ -9,6 +12,11 @@ class MainMenu extends Component {
   handleMenuClick = (e, { name }) => this.setState({
     activeItem: name
   })
+
+  handleLogout = (e) => {
+    e.preventDefault()
+    this.props.actions.logoutUser()
+  }
 
   render() {
     const { activeItem } = this.state
@@ -37,10 +45,16 @@ class MainMenu extends Component {
             ><Icon name='shopping cart' />Cart</Menu.Item>
             <Menu.Item
               as={Link} to='/login'
-              name='log-in-out'
-              active={activeItem === 'log-in-out'}
+              name='log-in'
+              active={activeItem === 'log-in'}
               onClick={this.handleMenuClick}
-            >Log In/Out </Menu.Item>
+            >Log In </Menu.Item>
+            <Menu.Item
+              as={Link} to='/logout'
+              name='log-out'
+              active={activeItem === 'log-out'}
+              onClick={this.handleLogout}
+            >Log Out </Menu.Item>
           </Menu.Menu>
         </Menu>
       </Sticky>
@@ -48,4 +62,12 @@ class MainMenu extends Component {
   }
 }
 
-export default MainMenu
+function mapStateToProps(state) {
+  return { user: state.user }
+}
+
+function mapDispatchToProps(dispatch) {
+  return { actions: bindActionCreators(actions, dispatch) }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainMenu)

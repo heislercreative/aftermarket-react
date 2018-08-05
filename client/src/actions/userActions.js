@@ -33,3 +33,13 @@ export function loginUser() {
     .then(resp => signupOptions(resp, dispatch))
   }
 }
+
+export function logoutUser() {
+  return (dispatch) => {
+    const user = {}
+    dispatch({
+      type: 'LOGOUT_USER',
+      payload: user
+    })
+  }
+}

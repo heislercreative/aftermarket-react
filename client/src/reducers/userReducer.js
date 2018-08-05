@@ -4,6 +4,9 @@ export default function authReducer(state = [], action) {
     case 'LOGIN_USER':
       return action.payload
 
+    case 'LOGOUT_USER':
+      return action.payload
+
     default:
       return state
   }

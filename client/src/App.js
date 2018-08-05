@@ -12,6 +12,7 @@ import ProductsPage from './containers/ProductsPage'
 import Account from './components/Account'
 import Cart from './containers/Cart'
 import Login from './components/Login'
+import Logout from './components/Logout'
 import Signup from './components/Signup'
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route exact path="/products" component={ProductsPage} />
           <Route exact path="/account" component={Account} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/logout" component={Logout} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/cart" component={Cart} />
         </div>
