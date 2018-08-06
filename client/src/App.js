@@ -7,7 +7,8 @@ import * as actions from './actions/productActions'
 import { Divider } from 'semantic-ui-react'
 import './App.css';
 
-import MainMenu from './components/MainMenu'
+import LoggedInMenu from './components/LoggedInMenu'
+import LoggedOutMenu from './components/LoggedOutMenu'
 import ProductsPage from './containers/ProductsPage'
 import Account from './components/Account'
 import Cart from './containers/Cart'
@@ -20,7 +21,8 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <MainMenu />
+          { this.props.token && <LoggedInMenu /> }
+          { !this.props.token && <LoggedOutMenu /> }
           <Divider hidden />
           <Route exact path="/" component={ProductsPage} />
           <Route exact path="/products" component={ProductsPage} />
@@ -28,6 +30,7 @@ class App extends Component {
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/cart" component={Cart} />
+          {this.props.token}
         </div>
       </Router>
     );
@@ -35,7 +38,7 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  return { products: state.products }
+  return { token: state.user.token }
 }
 
 function mapDispatchToProps(dispatch) {

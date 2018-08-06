@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { Menu, Sticky, Icon } from 'semantic-ui-react'
 import Logo from './Logo'
 
-class MainMenu extends Component {
+class LoggedInMenu extends Component {
   state = {
     activeItem: 'home'
   }
@@ -46,12 +46,6 @@ class MainMenu extends Component {
               onClick={this.handleMenuClick}
             ><Icon name='shopping cart' />Cart</Menu.Item>
             <Menu.Item
-              as={Link} to='/login'
-              name='log-in'
-              active={activeItem === 'log-in'}
-              onClick={this.handleMenuClick}
-            >Log In </Menu.Item>
-            <Menu.Item
               name='log-out'
               active={activeItem === 'log-out'}
               onClick={this.handleLogout}
@@ -71,4 +65,4 @@ function mapDispatchToProps(dispatch) {
   return { actions: bindActionCreators(actions, dispatch) }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainMenu)
+export default connect(mapStateToProps, mapDispatchToProps)(LoggedInMenu)
