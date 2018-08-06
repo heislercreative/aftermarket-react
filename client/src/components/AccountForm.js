@@ -142,16 +142,6 @@ class AccountForm extends Component {
           <br />
           <Button primary type='submit'>Submit</Button>
         </Form>
-        {this.state.email}<br />
-        {this.state.password}<br />
-        {this.state.first_name}<br />
-        {this.state.last_name}<br />
-        {this.state.address}<br />
-        {this.state.city}<br />
-        {this.state.state_initials}<br />
-        {this.state.zip}<br />
-        {this.props.formType}<br />
-        {this.props.user.token}
       </div>
     )
   }
