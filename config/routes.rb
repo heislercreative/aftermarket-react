@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :products
   scope '/api' do
     get 'products' => 'products#index'
+    get 'products/:id' => 'products#show'
     post 'users' => 'users#create'
     post 'users/:id' => 'users#update'
     post 'sessions' => 'sessions#create'
