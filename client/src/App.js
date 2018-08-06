@@ -10,6 +10,7 @@ import './App.css';
 import LoggedInMenu from './components/LoggedInMenu'
 import LoggedOutMenu from './components/LoggedOutMenu'
 import ProductsPage from './containers/ProductsPage'
+import ProductShow from './components/ProductShow'
 import Account from './components/Account'
 import Cart from './containers/Cart'
 import Login from './components/Login'
@@ -26,6 +27,7 @@ class App extends Component {
           <Divider hidden />
           <Route exact path="/" component={ProductsPage} />
           <Route exact path="/products" component={ProductsPage} />
+          <Route path={'/products/:productId'} component={ProductShow} />
           { this.props.token && <Route exact path="/account" component={Account} /> }
           { !this.props.token && <Route exact path="/login" component={Login} /> }
           { !this.props.token && <Route exact path="/signup" component={Signup} /> }

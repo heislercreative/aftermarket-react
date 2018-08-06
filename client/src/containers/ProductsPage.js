@@ -7,7 +7,6 @@ import * as actions from '../actions/productActions'
 import { Header, Divider } from 'semantic-ui-react'
 import Logo from '../components/Logo'
 import ProductsList from '../components/ProductsList'
-import ProductShow from '../components/ProductShow'
 
 class ProductsPage extends Component {
 
@@ -23,7 +22,6 @@ class ProductsPage extends Component {
           <Divider hidden />
         </Header>
         <ProductsList products={this.props.products} />
-        <Route path={'/products/:productId'} component={ProductShow} />
       </div>
     )
   }
