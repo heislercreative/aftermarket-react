@@ -10,6 +10,18 @@ export function createUser() {
   }
 }
 
+export function updateUser(props) {
+  return (dispatch) => {
+    dispatch({ type: 'UPDATING_USER' })
+    return fetch(`/api/users/${props.user.id}`, {
+      method: 'POST',
+      body: new FormData(document.getElementById("user-form")),
+      credentials: 'same-origin'
+    })
+    .then(resp => loginOptions(resp, dispatch))
+  }
+}
+
 export function loginUser() {
   return (dispatch) => {
     dispatch({ type: 'LOGGING_IN' })

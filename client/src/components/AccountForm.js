@@ -12,6 +12,7 @@ class AccountForm extends Component {
       this.state = {
         email: '',
         password: '',
+        password_placeholder: '•••••••',
         first_name: '',
         last_name: '',
         address: '',
@@ -19,10 +20,11 @@ class AccountForm extends Component {
         state_initials: '',
         zip: ''
       }
-    } else if (props.formType === 'updateUser'){
+    } else if (props.formType === 'updateUser') {
       this.state = {
         email: props.user.email,
         password: '',
+        password_placeholder: 'Please re-enter or change password',
         first_name: props.user.first_name,
         last_name: props.user.last_name,
         address: props.user.address,
@@ -42,7 +44,11 @@ class AccountForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.actions.createUser()
+    if (this.props.formType === 'createUser') {
+      this.props.actions.createUser()
+    } else if (this.props.formType === 'updateUser') {
+      this.props.actions.updateUser(this.props)
+    }
   }
 
   render(){
@@ -65,7 +71,7 @@ class AccountForm extends Component {
               <input
                 name='password'
                 type='password'
-                placeholder='••••••••'
+                placeholder={this.state.password_placeholder}
                 value={this.state.password}
                 onChange={this.handleChange}
               />
@@ -139,6 +145,11 @@ class AccountForm extends Component {
               />
             </Form.Field>
           </Form.Group>
+          <input
+            name='token'
+            type='hidden'
+            value={this.props.user.token}
+          />
           <br />
           <Button primary type='submit'>Submit</Button>
         </Form>

@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new_with_cart(user_params)
+    @user = User.new_with_cart(signup_params)
     if @user.save
       render json: @user, status: 201
     end
@@ -14,16 +14,22 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.update(user_params)
-    if @user.save
-      render json: @user, status: 201
+    if @user.token == update_params[:token]
+      @user.update(update_params)
+      if @user.save
+        render json: @user, status: 201
+      end
     end
   end
 
   private
 
-  def user_params
+  def signup_params
     params.permit(:email, :password, :first_name, :last_name, :address, :city, :state_initials, :zip)
+  end
+
+  def update_params
+    params.permit(:id, :token, :email, :password, :first_name, :last_name, :address, :city, :state_initials, :zip)
   end
 
 end

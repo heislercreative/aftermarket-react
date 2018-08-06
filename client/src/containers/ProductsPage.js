@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Route } from 'react-router-dom'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/productActions'
 
