@@ -5,10 +5,19 @@ import * as actions from '../actions/userActions'
 import { Form, Button } from 'semantic-ui-react'
 
 class AddToCart extends Component {
+  constructor(props) {
+    super(props)
+    if (props.productIds.includes(parseInt(props.productId))) {
+      this.state = { buttonDisabled: true }
+    } else {
+      this.state = { buttonDisabled: false }
+    }
+  }
 
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.actions.addToCart()
+    this.setState({ buttonDisabled: true })
   }
 
   render(){
@@ -25,7 +34,7 @@ class AddToCart extends Component {
             type='hidden'
             value={this.props.productId}
           />
-          <Button primary type='submit'>Add to Cart</Button>
+          <Button primary type='submit' disabled={this.state.buttonDisabled}>Add to Cart</Button>
         </Form>
         <br />
       </div>
@@ -34,7 +43,7 @@ class AddToCart extends Component {
 }
 
 function mapStateToProps(state) {
-  return { }
+  return { productIds: state.user.cart.products.map(product => product.id) }
 }
 
 function mapDispatchToProps(dispatch) {

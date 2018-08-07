@@ -25,7 +25,7 @@ class ProductShow extends Component {
 }
 
 function mapStateToProps(state, ownProps) {
-  if (state.user.includes('cart')) {
+  if (state.user.hasOwnProperty('cart')) {
     return {
       cartId: state.user.cart.id,
       productId: ownProps.match.params.productId,
