@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/productActions'
+import AddToCart from '../components/AddToCart'
 
 class ProductShow extends Component {
 
@@ -15,8 +16,8 @@ class ProductShow extends Component {
       <div className='product-div'>
         <h2>{product.name}</h2>
         <img src={product.img_full} alt={product.name} />
-
         <h3><em>${product.price}</em></h3>
+        <AddToCart />
         <p dangerouslySetInnerHTML={{__html: product.description}} />
       </div>
     )
