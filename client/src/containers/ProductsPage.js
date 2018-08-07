@@ -20,7 +20,7 @@ class ProductsPage extends Component {
           <Logo /> Products
           <Divider hidden />
         </Header>
-        <ProductsList products={this.props.products} />
+        <ProductsList page={'index'} products={this.props.products} />
       </div>
     )
   }

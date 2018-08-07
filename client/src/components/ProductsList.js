@@ -1,7 +1,8 @@
 import React from 'react'
 import ProductBasic from '../components/ProductBasic'
 
-const ProductsList = ({ products }) => {
+const ProductsList = ({ products, page }) => {
+
   return(
     <div className='page-container'>
       {products.map(product =>
@@ -11,6 +12,7 @@ const ProductsList = ({ products }) => {
           name={product.name}
           thumbnail={product.img_thumbnail}
           price={product.price}
+          page={page}
         />
       )}
     </div>
