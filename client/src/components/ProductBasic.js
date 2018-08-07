@@ -9,7 +9,7 @@ const ProductBasic = ({ id, name, thumbnail, price, page }) => {
         <img className='thumbnail-img' src={thumbnail} alt={name} />
         <h4>{name}</h4>
         <em>${price}</em>
-        { page === 'cart' && <RemoveFromCart /> }
+        { page === 'cart' && <RemoveFromCart productId={id}/> }
       </div>
     </a>
   )

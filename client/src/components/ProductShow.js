@@ -17,7 +17,7 @@ class ProductShow extends Component {
         <h2>{product.name}</h2>
         <img src={product.img_full} alt={product.name} />
         <h3><em>${product.price}</em></h3>
-        <AddToCart userId={this.props.userId} productId={this.props.productId}/>
+        <AddToCart cartId={this.props.cartId} productId={this.props.productId}/>
         <p dangerouslySetInnerHTML={{__html: product.description}} />
       </div>
     )
@@ -26,7 +26,7 @@ class ProductShow extends Component {
 
 function mapStateToProps(state, ownProps) {
   return {
-    userId: state.user.id,
+    cartId: state.user.cart.id,
     productId: ownProps.match.params.productId,
     product: state.currentProduct
   }

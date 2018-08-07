@@ -18,7 +18,7 @@ class RemoveFromCart extends Component {
           <input
             name='cart_id'
             type='hidden'
-            value={this.props.userId}
+            value={this.props.cartId}
           />
           <input
             name='product_id'
@@ -34,7 +34,7 @@ class RemoveFromCart extends Component {
 }
 
 function mapStateToProps(state) {
-  return { }
+  return { cartId: state.user.cart.id }
 }
 
 function mapDispatchToProps(dispatch) {

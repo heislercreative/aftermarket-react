@@ -18,7 +18,7 @@ class AddToCart extends Component {
           <input
             name='cart_id'
             type='hidden'
-            value={this.props.userId}
+            value={this.props.cartId}
           />
           <input
             name='product_id'
