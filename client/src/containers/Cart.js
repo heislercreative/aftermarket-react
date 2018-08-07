@@ -8,6 +8,7 @@ import ProductsList from '../components/ProductsList'
 
 class Cart extends Component {
   render() {
+    const user = this.props.user
     return(
       <div>
         <Container>
@@ -18,9 +19,16 @@ class Cart extends Component {
           <div className='page-container'>
             <Divider />
             <div className='cart-left'>
-              <ProductsList page={'cart'} products={this.props.products}/>
+              <ProductsList page={'cart'} products={user.cart.products}/>
             </div>
-            <div className='cart-right'>Total</div>
+            <div className='cart-right'>
+              <h3>Total: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>${this.props.total}</em></h3>
+              <Divider className='cart-divider' />
+              <h3>Address:</h3>
+              {user.first_name} {user.last_name}<br />
+              {user.address}<br />
+              {user.city}, {user.state_initials} {user.zip}<br />
+            </div>
           </div>
         </Container>
       </div>
@@ -30,7 +38,10 @@ class Cart extends Component {
 
 
 function mapStateToProps(state) {
-  return { products: state.user.cart.products }
+  return {
+    user: state.user,
+    total: state.user.cart.products.map(product => product.price).reduce((a, b) => a + b, 0)
+  }
 }
 
 function mapDispatchToProps(dispatch) {
