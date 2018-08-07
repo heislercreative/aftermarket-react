@@ -7,6 +7,12 @@ export default function authReducer(state = [], action) {
     case 'LOGOUT_USER':
       return action.payload
 
+    case 'UPDATE_CART':
+      return {
+        ...state,
+        cart: action.payload
+      }
+
     default:
       return state
   }

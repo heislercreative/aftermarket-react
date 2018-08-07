@@ -57,3 +57,19 @@ export function logoutUser() {
     .then(window.location = '/')
   }
 }
+
+export function addToCart() {
+  return (dispatch) => {
+      dispatch({ type: 'ADDING_ITEM' })
+      return fetch('/api/cart_products', {
+        method: 'POST',
+        body: new FormData(document.getElementById("add-to-cart")),
+        credentials: 'same-origin'
+      })
+      .then(resp => resp.json())
+      .then(cart => dispatch({
+        type: 'UPDATE_CART',
+        payload: cart
+      }))
+  }
+}

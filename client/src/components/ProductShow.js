@@ -17,7 +17,7 @@ class ProductShow extends Component {
         <h2>{product.name}</h2>
         <img src={product.img_full} alt={product.name} />
         <h3><em>${product.price}</em></h3>
-        <AddToCart />
+        <AddToCart userId={this.props.userId} productId={this.props.productId}/>
         <p dangerouslySetInnerHTML={{__html: product.description}} />
       </div>
     )

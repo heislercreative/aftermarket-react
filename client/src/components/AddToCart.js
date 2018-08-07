@@ -8,22 +8,33 @@ class AddToCart extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log('added to cart')
+    this.props.actions.addToCart()
   }
 
   render(){
     return(
-      <div className='form-container'>
+      <div>
         <Form id="add-to-cart" onSubmit={this.handleSubmit}>
+          <input
+            name='cart_id'
+            type='hidden'
+            value={this.props.userId}
+          />
+          <input
+            name='product_id'
+            type='hidden'
+            value={this.props.productId}
+          />
           <Button primary type='submit'>Add to Cart</Button>
         </Form>
+        <br />
       </div>
     )
   }
 }
 
 function mapStateToProps(state) {
-  return { user: state.user }
+  return { }
 }
 
 function mapDispatchToProps(dispatch) {
