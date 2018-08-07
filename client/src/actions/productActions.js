@@ -9,3 +9,15 @@ export function fetchProducts() {
         }))
     }
 }
+
+export function fetchProduct(props) {
+    return (dispatch) => {
+      dispatch({ type: 'LOADING_PRODUCT' })
+      return fetch(`/api/products/${props.productId}`)
+        .then(resp => resp.json())
+        .then(product => dispatch({
+          type: 'FETCH_PRODUCT',
+          payload: product
+        }))
+    }
+}

@@ -1,21 +1,35 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as actions from '../actions/productActions'
 
-const ProductShow = ({ productId }) => {
-  return (
-    <div className='product-div'>
-      <h3>Test #{productId}</h3>
+class ProductShow extends Component {
 
-      <em>$so</em>
-    </div>
-  )
-}
+  componentDidMount() {
+    this.props.actions.fetchProduct(this.props)
+  }
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    userId: state.user.id,
-    productId: ownProps.match.params.productId
+  render() {
+    return (
+      <div className='product-div'>
+        <h3>Test #{this.props.productId}</h3>
+
+        <em>$so</em>
+      </div>
+    )
   }
 }
 
-export default connect(mapStateToProps)(ProductShow)
+function mapStateToProps(state, ownProps) {
+  return {
+    userId: state.user.id,
+    productId: ownProps.match.params.productId,
+    product: state.currentProduct
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return { actions: bindActionCreators(actions, dispatch) }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductShow)
