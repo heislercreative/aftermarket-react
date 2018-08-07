@@ -44,7 +44,7 @@ class LoggedInMenu extends Component {
               name='cart'
               active={activeItem === 'cart'}
               onClick={this.handleMenuClick}
-            ><Icon name='shopping cart' />Cart</Menu.Item>
+            ><Icon name='shopping cart' />Cart ({this.props.user.cart.products.length})</Menu.Item>
             <Menu.Item
               name='log-out'
               active={activeItem === 'log-out'}
