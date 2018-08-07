@@ -10,11 +10,14 @@ class ProductShow extends Component {
   }
 
   render() {
+    const product = this.props.product
     return (
       <div className='product-div'>
-        <h3>Test #{this.props.productId}</h3>
+        <h2>{product.name}</h2>
+        <img src={product.img_full} alt={product.name} />
 
-        <em>$so</em>
+        <h3><em>${product.price}</em></h3>
+        <p dangerouslySetInnerHTML={{__html: product.description}} />
       </div>
     )
   }
