@@ -17,7 +17,7 @@ class ProductShow extends Component {
         <h2>{product.name}</h2>
         <img src={product.img_full} alt={product.name} />
         <h3><em>${product.price}</em></h3>
-        <AddToCart cartId={this.props.cartId} productId={this.props.productId}/>
+        { this.props.cartId && <AddToCart cartId={this.props.cartId} productId={this.props.productId}/>}
         <p dangerouslySetInnerHTML={{__html: product.description}} />
       </div>
     )
@@ -25,10 +25,17 @@ class ProductShow extends Component {
 }
 
 function mapStateToProps(state, ownProps) {
-  return {
-    cartId: state.user.cart.id,
-    productId: ownProps.match.params.productId,
-    product: state.currentProduct
+  if (state.user.includes('cart')) {
+    return {
+      cartId: state.user.cart.id,
+      productId: ownProps.match.params.productId,
+      product: state.currentProduct
+    }
+  } else {
+    return {
+      productId: ownProps.match.params.productId,
+      product: state.currentProduct
+    }
   }
 }
 
