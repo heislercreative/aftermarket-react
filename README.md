@@ -4,10 +4,10 @@ Etsy-style clone built with React/Redux and an internal Rails API, for the sale 
 
 ## Installation & Usage
 
-1)  To start using the app, clone the repository and `cd client` to navigate into the React client-side.
-2)  Run `npm install` to install Node dependencies necessary gems.
-3)  `cd ..` to return to the Rails app and run `rake db:migrate` and `rake db:seed` to create/populate the API database.
-4)  Run `rake start` to launch the client and API servers. Navigate to http://localhost:3000 to view the React app.
+1) To start using the app, clone the repository and `cd client` to navigate into the React client-side.
+2) Run `npm install` to install Node dependencies necessary gems.
+3) `cd ..` to return to the Rails app and run `rake db:migrate` and `rake db:seed` to create/populate the API database.
+4) Run `rake start` to launch the client and API servers. Navigate to http://localhost:3000 to view the React app.
 
 ### Signup/Login
 - Select 'Login' from the menu and use the Sign Up option to create a new account (all fields required).
