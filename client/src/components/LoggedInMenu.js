@@ -22,7 +22,6 @@ class LoggedInMenu extends Component {
 
   render() {
     const { activeItem } = this.state
-
     return (
       <Sticky>
         <Menu>
@@ -44,7 +43,7 @@ class LoggedInMenu extends Component {
               name='cart'
               active={activeItem === 'cart'}
               onClick={this.handleMenuClick}
-            ><Icon name='shopping cart' />Cart ({this.props.user.cart.products.length})</Menu.Item>
+            ><Icon name='shopping cart' />Cart ({this.props.itemCount})</Menu.Item>
             <Menu.Item
               name='log-out'
               active={activeItem === 'log-out'}
@@ -58,7 +57,10 @@ class LoggedInMenu extends Component {
 }
 
 function mapStateToProps(state) {
-  return { user: state.user }
+    return {
+      user: state.user,
+      itemCount: state.user.cart.products.length
+     }
 }
 
 function mapDispatchToProps(dispatch) {

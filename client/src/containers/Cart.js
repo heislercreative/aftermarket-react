@@ -5,6 +5,7 @@ import * as actions from '../actions/productActions'
 
 import { Header, Container, Segment, Divider } from 'semantic-ui-react'
 import ProductsList from '../components/ProductsList'
+import CheckoutCart from '../components/CheckoutCart'
 
 class Cart extends Component {
   render() {
@@ -28,6 +29,8 @@ class Cart extends Component {
               {user.first_name} {user.last_name}<br />
               {user.address}<br />
               {user.city}, {user.state_initials} {user.zip}<br />
+              <Divider hidden />
+              <CheckoutCart />
             </div>
           </div>
         </Container>
@@ -38,10 +41,18 @@ class Cart extends Component {
 
 
 function mapStateToProps(state) {
-  return {
-    user: state.user,
-    total: state.user.cart.products.map(product => product.price).reduce((a, b) => a + b, 0)
+  if (state.user.cart.products.length > 0) {
+    return {
+      user: state.user,
+      total: state.user.cart.products.map(product => product.price).reduce((a, b) => a + b, 0)
+    }
+  } else {
+    return {
+      user: state.user,
+      total: 0
+    }
   }
+
 }
 
 function mapDispatchToProps(dispatch) {

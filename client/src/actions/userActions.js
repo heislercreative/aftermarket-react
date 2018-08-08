@@ -89,3 +89,19 @@ export function removeFromCart(props) {
     }))
   }
 }
+
+export function checkoutCart(props) {
+  return (dispatch) => {
+    dispatch({ type: 'CHECKING_OUT' })
+    return fetch(`/api/carts/${props.cartId}`, {
+      method: 'POST',
+      body: new FormData(document.getElementById("checkout-cart")),
+      credentials: 'same-origin'
+    })
+    .then(resp => resp.json())
+    .then(cart => dispatch({
+      type: 'UPDATE_CART',
+      payload: cart
+    }))
+  }
+}

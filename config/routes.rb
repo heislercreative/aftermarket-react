@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     post 'sessions' => 'sessions#create'
     post 'cart_products' => 'cart_products#create'
     post 'cart_products/:id' => 'cart_products#destroy'
+    post 'carts/:id' => 'carts#update'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
