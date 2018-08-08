@@ -103,5 +103,8 @@ export function checkoutCart(props) {
       type: 'UPDATE_CART',
       payload: cart
     }))
+    .then(setTimeout(function() {
+      window.location.href = '/confirmation';
+    }, 500))
   }
 }
