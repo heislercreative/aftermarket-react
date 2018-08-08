@@ -22,7 +22,7 @@ class Cart extends Component {
               <ProductsList page={'cart'} products={user.cart.products}/>
             </div>
             <div className='cart-right'>
-              <h3>Total: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>${this.props.total}</em></h3>
+              <h3>Total: <em>${this.props.total}</em></h3>
               <Divider className='cart-divider' />
               <h3>Address:</h3>
               {user.first_name} {user.last_name}<br />

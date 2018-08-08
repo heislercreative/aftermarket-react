@@ -8,13 +8,13 @@ class RemoveFromCart extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.actions.addToCart()
+    this.props.actions.removeFromCart(this.props)
   }
 
   render(){
     return(
       <div>
-        <Form id="add-to-cart" onSubmit={this.handleSubmit}>
+        <Form id="remove-from-cart" onSubmit={this.handleSubmit}>
           <input
             name='cart_id'
             type='hidden'

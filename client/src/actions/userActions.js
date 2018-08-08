@@ -73,3 +73,19 @@ export function addToCart() {
       }))
   }
 }
+
+export function removeFromCart(props) {
+  return (dispatch) => {
+    dispatch({ type: 'REMOVING_ITEM' })
+    return fetch(`/api/cart_products/${props.cartId}`, {
+      method: 'POST',
+      body: new FormData(document.getElementById("remove-from-cart")),
+      credentials: 'same-origin'
+    })
+    .then(resp => resp.json())
+    .then(cart => dispatch({
+      type: 'UPDATE_CART',
+      payload: cart
+    }))
+  }
+}

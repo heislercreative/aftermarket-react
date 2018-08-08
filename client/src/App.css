@@ -85,6 +85,10 @@ label {
   box-shadow: 1px 1px 5px grey;
 }
 
+.cart-right em {
+  float: right;
+}
+
 .cart-divider {
   background-color: white;
 }
