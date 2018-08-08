@@ -30,7 +30,7 @@ class Cart extends Component {
               {user.address}<br />
               {user.city}, {user.state_initials} {user.zip}<br />
               <Divider hidden />
-              <CheckoutCart />
+              {}<CheckoutCart />
             </div>
           </div>
         </Container>
@@ -41,18 +41,10 @@ class Cart extends Component {
 
 
 function mapStateToProps(state) {
-  if (state.user.cart.products.length > 0) {
     return {
       user: state.user,
       total: state.user.cart.products.map(product => product.price).reduce((a, b) => a + b, 0)
     }
-  } else {
-    return {
-      user: state.user,
-      total: 0
-    }
-  }
-
 }
 
 function mapDispatchToProps(dispatch) {

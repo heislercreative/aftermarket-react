@@ -20,12 +20,14 @@ class CheckoutCart extends Component {
             type='hidden'
             value={this.props.cartId}
           />
-          {/* <input
-            name='product_ids'
-            type='hidden'
-            value={this.props.productIds}
-          /> */}
-          <Button type='submit' fluid inverted>Confirm Order</Button>
+          <Button
+            type='submit'
+            fluid
+            inverted
+            disabled={this.props.disabled}
+          >
+            Confirm Order
+          </Button>
         </Form>
         <br />
         {this.props.productIds}
@@ -35,9 +37,16 @@ class CheckoutCart extends Component {
 }
 
 function mapStateToProps(state) {
-  return {
-    cartId: state.user.cart.id,
-    // productIds: state.user.cart.products.map(product => product.id)
+  if (state.user.cart.products.length > 0) {
+    return {
+      cartId: state.user.cart.id,
+      disabled: false
+    }
+  } else {
+    return {
+      cartId: state.user.cart.id,
+      disabled: true
+    }
   }
 }
 
