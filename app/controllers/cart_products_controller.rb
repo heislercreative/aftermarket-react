@@ -7,9 +7,9 @@ class CartProductsController < ApplicationController
   end
 
   def destroy
-    @cart_product = CartProduct.find_by(cart_product_params)
-    @cart = Cart.find(@cart_product.cart_id)
-    @cart_product.destroy
+    @product = CartProduct.find_by(cart_product_params)
+    @product.destroy
+    @cart = Cart.find(params[:cart_id])
     render json: @cart
   end
 

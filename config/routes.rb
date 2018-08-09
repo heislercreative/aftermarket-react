@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  resources :carts
-  resources :users
-  resources :products
   scope '/api' do
     get 'products' => 'products#index'
     get 'products/:id' => 'products#show'
