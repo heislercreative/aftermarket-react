@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Header, Container, Divider } from 'semantic-ui-react'
 
 const OrderConfirmation = () =>

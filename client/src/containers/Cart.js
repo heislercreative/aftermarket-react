@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/productActions'
 
-import { Header, Container, Segment, Divider } from 'semantic-ui-react'
+import { Header, Container, Divider } from 'semantic-ui-react'
 import ProductsList from '../components/ProductsList'
 import CheckoutCart from '../components/CheckoutCart'
 

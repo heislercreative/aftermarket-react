@@ -7,7 +7,7 @@ import { Form, Button } from 'semantic-ui-react'
 class AddToCart extends Component {
   constructor(props) {
     super(props)
-    if (props.productIds.includes(parseInt(props.productId))) {
+    if (props.productIds.includes(parseInt(props.productId, 10))) {
       this.state = { buttonDisabled: true }
     } else {
       this.state = { buttonDisabled: false }
