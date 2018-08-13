@@ -1,4 +1,4 @@
-# Aftermarket React-Rails Vintage Store
+# Aftermarket Vintage Store
 
 Etsy-style clone built with React/Redux and an internal Rails API, for the sale of unique vintage items.
 
