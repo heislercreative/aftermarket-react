@@ -24,6 +24,10 @@ Etsy-style clone built with React/Redux and an internal Rails API, for the sale 
 - Remove items from cart if desired.
 - Confirm order to see order confirmation and remove products from purchase by other buyers.
 
+## Blog
+
+[View post here](https://heislercreative.github.io/aftermarket_shop_react_redux_project_with_rails_api)
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/heislercreative/aftermarket-react. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
