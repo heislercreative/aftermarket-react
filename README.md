@@ -1,4 +1,4 @@
-# Aftermarket React-Rails Vintage Store
+# Aftermarket Vintage Store
 
 Etsy-style clone built with React/Redux and an internal Rails API, for the sale of unique vintage items.
 
@@ -24,9 +24,13 @@ Etsy-style clone built with React/Redux and an internal Rails API, for the sale 
 - Remove items from cart if desired.
 - Confirm order to see order confirmation and remove products from purchase by other buyers.
 
+## Blog
+
+[View post here](https://heislercreative.github.io/aftermarket_shop_react_redux_project_with_rails_api)
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/heislercreative/dog-rescue-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/heislercreative/aftermarket-react. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -34,4 +38,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Dermatology Treatment App project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/heislercreative/dog-rescue-rails/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Aftermarket Vintage Store project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/heislercreative/aftermarket-react/blob/master/CODE_OF_CONDUCT.md).
