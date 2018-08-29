@@ -9,6 +9,9 @@
 user = User.new_with_cart(email: 'test@aftermarket.test', password: 'testpw', first_name: 'Brennan', last_name: 'Heisler', address: '1234 Main St', city: 'Durnsville', state_initials: 'IN', zip: 12345)
 user.save
 
+user2 = User.new_with_cart(email: 'jt@test.com', password: 'testpw1', first_name: 'John', last_name: 'Testerson', address: '1234 Main St', city: 'Durnsville', state_initials: 'IN', zip: 12345)
+user.save
+
 Product.create([
   {
     name: 'Crossbody Dark Green Leather Purse / G.H. Bass',
