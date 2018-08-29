@@ -2,7 +2,7 @@
 {
   "name": "aftermarket-react",
   "engines": {
-    "node": "6.2.0"
+    "node": "6.11.2"
   },
   "scripts": {
     "build": "cd client && npm install && npm run build && cd ..",
