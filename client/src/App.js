@@ -28,8 +28,8 @@ class App extends Component {
           <Divider hidden />
           <Route exact path="/" component={ProductsPage} />
           <Route exact path="/products" component={ProductsPage} />
-          <Route exact path='/products/:productId' component={ProductShow} />
-          <Route exact path='/confirmation' component={OrderConfirmation} />
+          <Route path={'/products/:productId'} component={ProductShow} />
+          <Route path={'/confirmation'} component={OrderConfirmation} />
           { this.props.token && <Route exact path="/account" component={Account} /> }
           { !this.props.token && <Route exact path="/login" component={Login} /> }
           { !this.props.token && <Route exact path="/signup" component={Signup} /> }
