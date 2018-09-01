@@ -22,6 +22,10 @@ class ProductShow extends Component {
       </div>
     )
   }
+
+  componentWillUnmount() {
+    this.props.actions.cleanupProduct()
+  }
 }
 
 function mapStateToProps(state, ownProps) {

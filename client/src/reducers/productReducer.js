@@ -12,6 +12,9 @@ export default function productReducer(state = [], action) {
         sold_out: action.payload.sold_out,
       }
 
+    case 'CLEANUP_PRODUCT':
+      return action.payload
+
     default:
       return state
   }

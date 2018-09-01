@@ -21,3 +21,13 @@ export function fetchProduct(props) {
         }))
     }
 }
+
+export function cleanupProduct() {
+  return (dispatch) => {
+    const product = {}
+    dispatch({
+      type: 'CLEANUP_PRODUCT',
+      payload: product
+    })
+  }
+}
