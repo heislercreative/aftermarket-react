@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     post 'users/:id' => 'users#update'
     post 'sessions' => 'sessions#create'
     post 'cart_products' => 'cart_products#create'
-    post 'cart_products/:id' => 'cart_products#destroy'
+    post 'cart_products/:cart_id/:product_id' => 'cart_products#destroy'
     post 'carts/:id' => 'carts#update'
   end
 
