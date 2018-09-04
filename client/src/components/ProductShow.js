@@ -12,8 +12,11 @@ class ProductShow extends Component {
 
   render() {
     const product = this.props.product
+
+
     return (
       <div className='product-div'>
+        <a href='/products'>Back</a>
         <h2>{product.name}</h2>
         <img src={product.img_full} alt={product.name} />
         <h3><em>${product.price}</em></h3>
