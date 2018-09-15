@@ -67,12 +67,22 @@ label {
   margin-right: auto;
 }
 
+.cart-right {
+  text-align: left;
+  padding: 20px;
+  color: white;
+  background-color: #FD7322;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px grey;
+}
+
 @media (max-width: 650px) {
   .cart-left {
     width: 100%;
     float: left;
     text-align: center;
     padding: 20px;
+    margin-top: -50px;
   }
 
   .cart-right {
@@ -80,11 +90,6 @@ label {
     clear: both;
     text-align: left;
     margin: 0 auto 40px auto;
-    padding: 20px;
-    color: white;
-    background-color: #FD7322;
-    border-radius: 3px;
-    box-shadow: 1px 1px 5px grey;
   }
 }
 
@@ -94,17 +99,12 @@ label {
     float: left;
     text-align: left;
     padding: 20px 0 20px 0;
+    margin-top: -50px;
   }
 
   .cart-right {
     width: 33%;
     float: right;
-    text-align: left;
-    padding: 20px;
-    color: white;
-    background-color: #FD7322;
-    border-radius: 3px;
-    box-shadow: 1px 1px 5px grey;
   }
 }
 
@@ -114,4 +114,17 @@ label {
 
 .cart-divider {
   background-color: white;
+}
+
+.removal-badge {
+  position: relative;
+  top: 35px;
+  left: 233px;
+  width: 31px;
+  height: 31px;
+}
+
+.badge-x {
+  margin: 0 0 0 -3px;
+  padding: 0;
 }

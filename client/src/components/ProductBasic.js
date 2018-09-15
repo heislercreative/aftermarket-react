@@ -5,6 +5,7 @@ const ProductBasic = ({ id, name, thumbnail, price, page }) => {
 
   return (
     <div className='product-div'>
+      { page === 'cart' && <RemoveFromCart productId={id}/> }
       <a className='product-link' href={`/products/${id}`}>
         <div>
           <img className='thumbnail-img' src={thumbnail} alt={name} />
@@ -12,7 +13,6 @@ const ProductBasic = ({ id, name, thumbnail, price, page }) => {
           <em>${price}</em>
         </div>
       </a>
-      { page === 'cart' && <RemoveFromCart productId={id}/> }
     </div>
   )
 }

@@ -25,7 +25,15 @@ class RemoveFromCart extends Component {
             type='hidden'
             value={this.props.productId}
           />
-          <Button type='submit' compact={true}>X</Button>
+          <Button
+            className='removal-badge'
+            type='submit'
+            compact={true}
+            circular={true}
+            color='blue'
+          >
+            <span className='badge-x'>x</span>
+          </Button>
         </Form>
         <br />
       </div>
