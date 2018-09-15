@@ -18,10 +18,14 @@ class ProductShow extends Component {
       <div className='product-div'>
         <a href='/products'>Back</a>
         <h2>{product.name}</h2>
-        <img src={product.img_full} alt={product.name} />
-        <h3><em>${product.price}</em></h3>
-        { this.props.cartId && <AddToCart cartId={this.props.cartId} productId={this.props.productId}/>}
-        <p dangerouslySetInnerHTML={{__html: product.description}} />
+        <div className='full-img'>
+          <img src={product.img_full} alt={product.name} />
+        </div>
+        <div className='price-and-description'>
+          <h3><em>${product.price}</em></h3>
+          { this.props.cartId && <AddToCart cartId={this.props.cartId} productId={this.props.productId}/>}
+          <p dangerouslySetInnerHTML={{__html: product.description}} />
+        </div>
       </div>
     )
   }

@@ -17,7 +17,7 @@ Product.create([
     name: 'Crossbody Dark Green Leather Purse / G.H. Bass',
     img_full: 'http://heislercreative.com/demos/aftermarket/crossbody.jpg',
     img_thumbnail: 'http://heislercreative.com/demos/aftermarket/crossbody_thumb.jpg',
-    description: "This G.H. Bass purse is made of genuine leather.\r\n\r\nIt is spacious in the main compartment, where you'll find a small compartment with a zipper and another pouch on the outside.\r\n\r\nCondition: Great, like new. Very clean inside and out. Some very minor scratches or normal sings of wear for leather here and there but nothing too noticeable, you would really need to look closely to find those \"defects\" (see photo).\r\nThe hardware is in good condition, and the color is still vibrant.\r\n\r\nMeasurements\r\n\r\nLength: 10.5in at the top (longest point) & 8in at the bottom\r\nHeight: 9.5in\r\nWidth: 4in\r\nStrap: 44in",
+    description: "This G.H. Bass purse is made of genuine leather.\r\n\r\nIt is spacious in the main compartment, where you'll find a small compartment with a zipper and another pouch on the outside.\r\n\r\nCondition: Great, like new. Very clean inside and out. Some very minor scratches or normal signs of wear for leather here and there but nothing too noticeable, you would really need to look closely to find those \"defects\" (see photo).\r\nThe hardware is in good condition, and the color is still vibrant.\r\n\r\nMeasurements\r\n\r\nLength: 10.5in at the top (longest point) & 8in at the bottom\r\nHeight: 9.5in\r\nWidth: 4in\r\nStrap: 44in",
     price: 70
   },
 
@@ -81,7 +81,7 @@ Product.create([
     name: 'Crossbody Dark Green Leather Purse / G.H. Bass',
     img_full: 'http://heislercreative.com/demos/aftermarket/crossbody.jpg',
     img_thumbnail: 'http://heislercreative.com/demos/aftermarket/crossbody_thumb.jpg',
-    description: "This G.H. Bass purse is made of genuine leather.\r\n\r\nIt is spacious in the main compartment, where you'll find a small compartment with a zipper and another pouch on the outside.\r\n\r\nCondition: Great, like new. Very clean inside and out. Some very minor scratches or normal sings of wear for leather here and there but nothing too noticeable, you would really need to look closely to find those \"defects\" (see photo).\r\nThe hardware is in good condition, and the color is still vibrant.\r\n\r\nMeasurements\r\n\r\nLength: 10.5in at the top (longest point) & 8in at the bottom\r\nHeight: 9.5in\r\nWidth: 4in\r\nStrap: 44in",
+    description: "This G.H. Bass purse is made of genuine leather.\r\n\r\nIt is spacious in the main compartment, where you'll find a small compartment with a zipper and another pouch on the outside.\r\n\r\nCondition: Great, like new. Very clean inside and out. Some very minor scratches or normal signs of wear for leather here and there but nothing too noticeable, you would really need to look closely to find those \"defects\" (see photo).\r\nThe hardware is in good condition, and the color is still vibrant.\r\n\r\nMeasurements\r\n\r\nLength: 10.5in at the top (longest point) & 8in at the bottom\r\nHeight: 9.5in\r\nWidth: 4in\r\nStrap: 44in",
     price: 70
   },
 
@@ -145,7 +145,7 @@ Product.create([
     name: 'Crossbody Dark Green Leather Purse / G.H. Bass',
     img_full: 'http://heislercreative.com/demos/aftermarket/crossbody.jpg',
     img_thumbnail: 'http://heislercreative.com/demos/aftermarket/crossbody_thumb.jpg',
-    description: "This G.H. Bass purse is made of genuine leather.\r\n\r\nIt is spacious in the main compartment, where you'll find a small compartment with a zipper and another pouch on the outside.\r\n\r\nCondition: Great, like new. Very clean inside and out. Some very minor scratches or normal sings of wear for leather here and there but nothing too noticeable, you would really need to look closely to find those \"defects\" (see photo).\r\nThe hardware is in good condition, and the color is still vibrant.\r\n\r\nMeasurements\r\n\r\nLength: 10.5in at the top (longest point) & 8in at the bottom\r\nHeight: 9.5in\r\nWidth: 4in\r\nStrap: 44in",
+    description: "This G.H. Bass purse is made of genuine leather.\r\n\r\nIt is spacious in the main compartment, where you'll find a small compartment with a zipper and another pouch on the outside.\r\n\r\nCondition: Great, like new. Very clean inside and out. Some very minor scratches or normal signs of wear for leather here and there but nothing too noticeable, you would really need to look closely to find those \"defects\" (see photo).\r\nThe hardware is in good condition, and the color is still vibrant.\r\n\r\nMeasurements\r\n\r\nLength: 10.5in at the top (longest point) & 8in at the bottom\r\nHeight: 9.5in\r\nWidth: 4in\r\nStrap: 44in",
     price: 70
   },
 
@@ -209,7 +209,7 @@ Product.create([
     name: 'Crossbody Dark Green Leather Purse / G.H. Bass',
     img_full: 'http://heislercreative.com/demos/aftermarket/crossbody.jpg',
     img_thumbnail: 'http://heislercreative.com/demos/aftermarket/crossbody_thumb.jpg',
-    description: "This G.H. Bass purse is made of genuine leather.\r\n\r\nIt is spacious in the main compartment, where you'll find a small compartment with a zipper and another pouch on the outside.\r\n\r\nCondition: Great, like new. Very clean inside and out. Some very minor scratches or normal sings of wear for leather here and there but nothing too noticeable, you would really need to look closely to find those \"defects\" (see photo).\r\nThe hardware is in good condition, and the color is still vibrant.\r\n\r\nMeasurements\r\n\r\nLength: 10.5in at the top (longest point) & 8in at the bottom\r\nHeight: 9.5in\r\nWidth: 4in\r\nStrap: 44in",
+    description: "This G.H. Bass purse is made of genuine leather.\r\n\r\nIt is spacious in the main compartment, where you'll find a small compartment with a zipper and another pouch on the outside.\r\n\r\nCondition: Great, like new. Very clean inside and out. Some very minor scratches or normal signs of wear for leather here and there but nothing too noticeable, you would really need to look closely to find those \"defects\" (see photo).\r\nThe hardware is in good condition, and the color is still vibrant.\r\n\r\nMeasurements\r\n\r\nLength: 10.5in at the top (longest point) & 8in at the bottom\r\nHeight: 9.5in\r\nWidth: 4in\r\nStrap: 44in",
     price: 70
   },
 
@@ -273,7 +273,7 @@ Product.create([
     name: 'Crossbody Dark Green Leather Purse / G.H. Bass',
     img_full: 'http://heislercreative.com/demos/aftermarket/crossbody.jpg',
     img_thumbnail: 'http://heislercreative.com/demos/aftermarket/crossbody_thumb.jpg',
-    description: "This G.H. Bass purse is made of genuine leather.\r\n\r\nIt is spacious in the main compartment, where you'll find a small compartment with a zipper and another pouch on the outside.\r\n\r\nCondition: Great, like new. Very clean inside and out. Some very minor scratches or normal sings of wear for leather here and there but nothing too noticeable, you would really need to look closely to find those \"defects\" (see photo).\r\nThe hardware is in good condition, and the color is still vibrant.\r\n\r\nMeasurements\r\n\r\nLength: 10.5in at the top (longest point) & 8in at the bottom\r\nHeight: 9.5in\r\nWidth: 4in\r\nStrap: 44in",
+    description: "This G.H. Bass purse is made of genuine leather.\r\n\r\nIt is spacious in the main compartment, where you'll find a small compartment with a zipper and another pouch on the outside.\r\n\r\nCondition: Great, like new. Very clean inside and out. Some very minor scratches or normal signs of wear for leather here and there but nothing too noticeable, you would really need to look closely to find those \"defects\" (see photo).\r\nThe hardware is in good condition, and the color is still vibrant.\r\n\r\nMeasurements\r\n\r\nLength: 10.5in at the top (longest point) & 8in at the bottom\r\nHeight: 9.5in\r\nWidth: 4in\r\nStrap: 44in",
     price: 70
   },
 
@@ -337,7 +337,7 @@ Product.create([
     name: 'Crossbody Dark Green Leather Purse / G.H. Bass',
     img_full: 'http://heislercreative.com/demos/aftermarket/crossbody.jpg',
     img_thumbnail: 'http://heislercreative.com/demos/aftermarket/crossbody_thumb.jpg',
-    description: "This G.H. Bass purse is made of genuine leather.\r\n\r\nIt is spacious in the main compartment, where you'll find a small compartment with a zipper and another pouch on the outside.\r\n\r\nCondition: Great, like new. Very clean inside and out. Some very minor scratches or normal sings of wear for leather here and there but nothing too noticeable, you would really need to look closely to find those \"defects\" (see photo).\r\nThe hardware is in good condition, and the color is still vibrant.\r\n\r\nMeasurements\r\n\r\nLength: 10.5in at the top (longest point) & 8in at the bottom\r\nHeight: 9.5in\r\nWidth: 4in\r\nStrap: 44in",
+    description: "This G.H. Bass purse is made of genuine leather.\r\n\r\nIt is spacious in the main compartment, where you'll find a small compartment with a zipper and another pouch on the outside.\r\n\r\nCondition: Great, like new. Very clean inside and out. Some very minor scratches or normal signs of wear for leather here and there but nothing too noticeable, you would really need to look closely to find those \"defects\" (see photo).\r\nThe hardware is in good condition, and the color is still vibrant.\r\n\r\nMeasurements\r\n\r\nLength: 10.5in at the top (longest point) & 8in at the bottom\r\nHeight: 9.5in\r\nWidth: 4in\r\nStrap: 44in",
     price: 70
   },
 
