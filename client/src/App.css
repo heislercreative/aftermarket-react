@@ -67,22 +67,45 @@ label {
   margin-right: auto;
 }
 
-.cart-left {
-  width: 67%;
-  float: left;
-  text-align: left;
-  padding: 20px;
+@media (max-width: 650px) {
+  .cart-left {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .cart-right {
+    width: 80%;
+    clear: both;
+    text-align: left;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    color: white;
+    background-color: #FD7322;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px grey;
+  }
 }
 
-.cart-right {
-  width: 33%;
-  float: right;
-  text-align: left;
-  padding: 20px;
-  color: white;
-  background-color: #FD7322;
-  border-radius: 3px;
-  box-shadow: 1px 1px 5px grey;
+@media (min-width: 651px) {
+  .cart-left {
+    width: 67%;
+    float: left;
+    text-align: left;
+    padding: 20px 0 20px 0;
+  }
+
+  .cart-right {
+    width: 33%;
+    float: right;
+    text-align: left;
+    padding: 20px;
+    color: white;
+    background-color: #FD7322;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px grey;
+  }
 }
 
 .cart-right em {
