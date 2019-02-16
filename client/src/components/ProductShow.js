@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/productActions'
@@ -16,7 +17,7 @@ class ProductShow extends Component {
 
     return (
       <div className='product-div'>
-        <a href='/products'>Back</a>
+        <Link to='/products'>Back</Link>
         <h2>{product.name}</h2>
         <div className='full-img'>
           <img src={product.img_full} alt={product.name} />

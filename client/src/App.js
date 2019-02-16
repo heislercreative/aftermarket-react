@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import { bindActionCreators } from 'redux' 
 import * as actions from './actions/productActions'
 
 import { Divider } from 'semantic-ui-react'

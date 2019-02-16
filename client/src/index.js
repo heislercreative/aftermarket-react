@@ -25,7 +25,7 @@ export const persistor = persistStore(store)
 
 ReactDOM.render(
   <Provider store={store} >
-      <App />
+    <App />
   </Provider>,
   document.getElementById('root')
 );
