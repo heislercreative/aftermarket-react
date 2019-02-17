@@ -41,7 +41,6 @@ function loginOptions(resp, dispatch) {
       type: 'LOGIN_USER',
       payload: user
     }))
-    .then(window.location = '/')
   } else {
     console.log('error')
   }
@@ -103,8 +102,5 @@ export function checkoutCart(props) {
       type: 'UPDATE_CART',
       payload: cart
     }))
-    .then(setTimeout(function() {
-      window.location.href = '/confirmation';
-    }, 500))
   }
 }

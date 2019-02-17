@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/userActions'
@@ -6,9 +7,10 @@ import { Form, Button } from 'semantic-ui-react'
 
 class CheckoutCart extends Component {
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault()
-    this.props.actions.checkoutCart(this.props)
+    await this.props.actions.checkoutCart(this.props)
+    this.props.history.push('/order-confirmation')
   }
 
   render(){
@@ -54,4 +56,4 @@ function mapDispatchToProps(dispatch) {
   return { actions: bindActionCreators(actions, dispatch) }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CheckoutCart)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CheckoutCart))

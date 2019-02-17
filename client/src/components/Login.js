@@ -20,9 +20,10 @@ class Login extends Component {
     })
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault()
-    this.props.actions.loginUser()
+    await this.props.actions.loginUser()
+    this.props.history.push('/')
   }
 
   render() {

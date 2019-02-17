@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/userActions'
@@ -42,12 +43,14 @@ class AccountForm extends Component {
     })
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault()
     if (this.props.formType === 'createUser') {
-      this.props.actions.createUser()
+      await this.props.actions.createUser()
+      this.props.history.push('/')
     } else if (this.props.formType === 'updateUser') {
-      this.props.actions.updateUser(this.props)
+      await this.props.actions.updateUser(this.props)
+      this.props.history.push('/account-confirmation')
     }
   }
 
@@ -166,4 +169,4 @@ function mapDispatchToProps(dispatch) {
   return { actions: bindActionCreators(actions, dispatch) }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AccountForm)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AccountForm))
