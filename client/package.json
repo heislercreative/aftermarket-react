@@ -2,9 +2,6 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "npm": "3.10.10"
-  },
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": ">=16.4.2",
@@ -19,8 +16,8 @@
     "semantic-ui-css": "^2.3.3",
     "semantic-ui-react": "^0.82.1",
     "uuid": "^3.3.2",
-    "merge": ">=1.2.1",
-    "webpack-dev-server": ">=3.1.11"
+    "merge": ">=1.2.1"
+
   },
   "scripts": {
     "start": "react-scripts start",
