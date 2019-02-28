@@ -2,6 +2,9 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "3.10.10"
+  },
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": ">=16.4.2",
