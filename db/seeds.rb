@@ -70,11 +70,11 @@ Product.create([
   },
 
   {
-    name: 'Off-White Leather Purse/Clutch - Ann Klein by Calderon Edition',
-    img_full: 'https://heislercreative.com/demos/aftermarket/off_white_clutch.jpg',
-    img_thumbnail: 'https://heislercreative.com/demos/aftermarket/off_white_clutch_thumb.jpg',
-    description: "Leather Handbag by Anne Klein for Calderon. Made in the 80’s.\r\n\r\nColor: off-white. Beige Interior with vinyl lining\r\n\r\nCould be used as a clutch when you tuck the straps inside.\r\n\r\nIt has one interior zip pocket with the lion logo in gold, as well as a plate inside with Anne Klein for Calderon.\r\nThe front has a patch with the Anne Klein logo.\r\n\r\nHinged closure, it opens wide and stays open without having to hold it.\r\n\r\nCondition: slightly used with minor visible wear. The inside has two tiny blue spots, and one little scratch in the front (you really have to look closely to see these defects). \r\n\r\nMeasurements\r\nHeight: 6.6in\r\nLength: 12in\r\nStrap length: 3in",
-    price: 80
+    name: 'Black Leather Daypack',
+    img_full: 'https://heislercreative.com/demos/aftermarket/daypack.jpg',
+    img_thumbnail: 'https://heislercreative.com/demos/aftermarket/daypack_thumb.jpg',
+    description: "This Black Leather Daypack is very similar to Coach's version. It was made in the 1980's in Korea. It has a drawstring and flap-over combination closure with a turnlock on the front, which has some wear. The straps have a buckle for length adjustment.\r\n\r\nIt's in good condition and there are no other flaws.\r\n\r\nLength: 7in\r\n\r\nHeight: 9.5in\r\n\r\nDepth: 5in\r\n\r\nCompartments: a main compartment & a zipper interior compartment.",
+    price: 75
   },
 
   {
