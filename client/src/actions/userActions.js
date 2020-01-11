@@ -78,7 +78,7 @@ export function removeFromCart(props) {
     dispatch({ type: 'REMOVING_ITEM' })
     return fetch(`/api/cart_products/${props.cartId}/${props.productId}`, {
       method: 'POST',
-      body: new FormData(document.getElementById(`remove-from-cart-${props.productID}`)),
+      body: new FormData(document.getElementById(`remove-from-cart-${props.productId}`)),
       credentials: 'same-origin'
     })
     .then(resp => resp.json())
